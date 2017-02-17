@@ -1,0 +1,48 @@
+<div class="header" ng-controller="HeaderCtrl" >
+	<div class="wrap-960 md-padding">
+		<div layout="row" layout-align="space-between end"
+		layout-xs="column" layout-sm="column" layout-align-sm="center center" layout-align-xs="center center">
+			<div ui-sref="home.main" class="pointer">
+				<img src="images/logo-main.png">
+			</div>
+			<md-button 
+				aria-label="Open Menu" 
+				ng-show="showMenuButton()" 
+				ng-click="toggleMenu()">
+				<i class="fa fa-bars"></i>
+			</md-button>
+			<div layout="column">
+				<div 
+					class="navigation" 
+					layout="row" 
+					layout-sm="column" 
+					layout-xs="column"
+					layout-align-sm="start center" 
+					layout-align-xs="start center"  
+					ng-show="menuIsVisible || media('gt-sm')">
+					<md-content 
+						class="nav-item"
+						ng-class="isSelected(item.link) ? 'selected' : ''" 
+						ng-repeat="item in navigationItems"
+						ui-sref="{{item.link}}"
+						md-ink-ripple >
+							{{item.text}}
+					</md-content>
+				</div>
+				<div layout="row" layout-align="end center">
+					<a class="social-item" layout="row" layout-align="center center" href="http://facebook.com/">
+					    <i class="fa fa-facebook" aria-hidden="true"></i>
+					</a>
+					<a class="social-item" layout="row" layout-align="center center" href="http://twitter.com/">
+					    <i class="fa fa-twitter" aria-hidden="true"></i>
+					</a>
+					<a class="social-item" layout="row" layout-align="center center" href="http://instagram.com/">
+					    <i class="fa fa-instagram" aria-hidden="true"></i>
+					</a>
+					
+				</div>
+			</div>	
+		</div>	
+	</div>
+</div>
+
