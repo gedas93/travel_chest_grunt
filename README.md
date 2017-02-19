@@ -5,7 +5,7 @@ version 0.15.1.
 
 ## Build & development
 
-run 'npm install' to install all dependecies
+run 'npm install' to install all dependecies &
 run 'grunt serve' to preview
 
 
