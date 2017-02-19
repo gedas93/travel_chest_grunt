@@ -1,2 +1,65 @@
-<p>This is the blog/list viewasdasd.</p>
-<div >{{resource.post[0]}}</div>
+<div layout="column" layout-align="center center" class="wrap-960 body-content" flex ng-cloak>
+	<div layout="column" layout-align="center center" class="blog_welcomeBox">
+		<div class="blog_header">The Travel Chest Blog</div>
+		<span class="blog_parag">
+			Duis auctor ultricies sapien pellentesque tincidunt. Duis dictum ante at orci ultrices, eget sollicitudin libero pellentesque amet eget.
+		</span>
+	</div>
+	<div class="blog_content" 
+		layout="row" 
+		layout-sm="column"
+		layout-xs="column"
+		layout-fill >  
+		<div class="blog_col" flex layout="column">
+			<div ng-repeat="post in resource.post track by $index" ng-if="$even" layout="column">
+				<div class="blog_post" ng-class="post.postTheme">
+					<img class="blog_post_image" src="{{post.imageSource}}">
+					<div class="blog_post_content">
+						<div class="blog_post_header">{{post.title}} | {{$index}}</div>
+						<div>{{post.content}}</div>
+					</div>
+				</div>
+				<div layout="row" layout-align="center center" class="blog_post_bottom">
+					<md-content md-ink-ripple class="blog_post_button" ng-class="post.buttonTheme">Read this post</md-content>
+				</div>
+			</div>
+		</div>
+		<div class="blog_col" flex layout="column">
+			<div ng-repeat="post in resource.post track by $index" ng-if="$odd" layout="column">
+				<div class="blog_post" ng-class="post.postTheme"> 
+					<img class="blog_post_image" src="{{post.imageSource}}">
+					<div class="blog_post_content">
+						<div class="blog_post_header">{{post.title}} {{$index}}</div>
+						<div>{{post.content}}</div>
+					</div>
+				</div>
+				<div layout="row" layout-align="center center" class="blog_post_bottom">
+					<md-content md-ink-ripple class="blog_post_button" ng-class="post.buttonTheme">Read this post</md-content>
+				</div>
+			</div>
+		</div>
+		<div class="sideBar" flex layout="column" layout-align="start center">
+			<img src="images/chest.png" class="sideNavImg">
+			<div class="sideNavHeader bold">Categories</div>
+			<a class="sideNavLink" href="">Rescue news</a>
+			<a class="sideNavLink" href="">In the press</a>
+			<a class="sideNavLink" href="">Volunteers and supporters</a>
+			<a class="sideNavLink" href="">Starlight Barking</a>
+			<a class="sideNavLink" href="">Travel Tips</a>
+			<a class="sideNavLink" href="">Inspiration and ideas</a>
+			<a class="sideNavLink" href="">Latest Deals</a>
+			<img src="images/chest.png" class="sideNavImg">
+			<div class="sideNavHeader bold">Latest Posts</div>
+			<a class="sideNavLink" href="" ng-repeat="post in resource.post">{{post.title}}</a>	
+			<div class="qoute top">&#8220</div>
+			<div class="sideNav_quote">Take every chance you get in life, because some things only happen once.</div>
+			<div class="qoute">&#8221</div>
+		</div>	
+	</div>
+	<div class="separator">
+		<div class="separator light"></div>
+	</div>
+	<div class="blog_footer">
+		<md-content md-ink-ripple class="loadMore_button purple">Load more posts</md-content>
+	</div>
+</div>

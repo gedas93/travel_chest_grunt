@@ -1,0 +1,40 @@
+<div layout="column" layout-align="center center" ng-controller="HeaderCtrl"> 
+	<div class="footer_text bold">Quick Links</div>
+	<div layout="row" layout-align="center center"
+		layout-sm="column" layout-align-sm="center center"
+		layout-xs="column" layout-align-xs="center center"
+	>
+		<div ng-repeat="ni in navigationItems" ui-sref="{{ni.link}}" class="footer_navItems">
+			{{ni.text}}
+		</div>
+		<div class="footer_navItems">
+			FAQs
+		</div>
+		<div class="footer_navItems">
+			Get Involved
+		</div>
+	</div>
+	<div layout="row" layout-align="space-around center" class="footer_contacts">
+		<div class="footer_text">Call us on 01778341455</div>
+		<div class="dot"></div>
+		<div class="footer_text">hello@travelchest.com</div>
+	</div>
+	<div class="separator_white"></div>
+	<div class="footer_text bold">Sign up to receive updates, news and latest deals!</div>
+	<div class="footer_subscribe" layout="row" layout-align="center center"
+			layout-sm="column" layout-align="center center"
+			layout-xs="column" layout-align="center center"
+	>
+		<div>
+			<input type="text" name="name" class="footer_input" placeholder="Full Name">
+		</div> 
+		<div layout="row" layout-align="end center">
+			<input type="email" name="email" class="footer_input wButton" placeholder="E-Mail">
+			<div class="footer_buttonWrap"></div>
+			<md-content md-ink-ripple class="footer_Button" layout="row" layout-align="center center">
+			    <span >Send!</span>
+			</md-content>
+		</div> 
+	</div>
+
+</div>

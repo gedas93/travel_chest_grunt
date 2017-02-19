@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,600');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900');
 
 :root{
   --bcg_header : #ffffff;
@@ -7,8 +8,13 @@
   --nav_font : #1b1b1b;
   --nav_accent : #1ea5b2;
   --nav_accent_darker : #16818b;
+  --sideBar_background : #451734;
 }
 body {
+  background-color: var(--bcg_main);
+  font-family: 'Raleway', sans-serif;
+}
+.body-content {
   background-color: var(--bcg_main);
 }
 .wrap-960 {
@@ -23,7 +29,6 @@ body {
   background-color: inherit;
   font-style: none;
   color: var(--nav_font);
-  font-family: 'Raleway', sans-serif;
   font-size: 12pt;
   padding-bottom: 15px;
   padding-top: 15px;
@@ -54,4 +59,229 @@ body {
 }
 .pointer {
   cursor: pointer;
+}
+.blog_header {
+  text-align: center;
+  font-size: 24pt;
+  color: var(--nav_accent);
+  font-weight: bold;
+  padding-top: 50px;
+  padding-bottom: 25px; 
+}
+.blog_parag {
+  width: 650px;
+  text-align: center;
+  font-size: 14pt;
+  padding: 5px;
+}
+.blog_welcomeBox {
+  margin: 25px; 
+  max-width: 650px;
+}
+.blog_content {
+  max-width: 960px !important;
+  align-items: stretch;
+}
+.blog_post {
+  background-color: white;
+  color: white;
+  border-radius: 5px;
+  /*margin-bottom: 40px;*/
+  padding-bottom: -10px;
+  width: 100%;
+}
+.blog_col {
+  padding: 15px;
+}
+.blog_post_header {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-size: 15pt;
+  font-weight: bold;
+}
+.blog_post_content {
+  padding: 15px;
+  padding-bottom: 45px;
+  font-size: 11pt;
+  line-height: 1.7em;
+}
+.blog_post_image {
+  border-radius: 5px 5px 0px 0px;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+
+}
+.blog_post_bottom {
+  height: 0px;
+  margin-bottom: 55px;   
+}
+.blog_post_button{
+  position: absolute;
+  cursor: pointer;
+  background-color: grey;
+  padding: 15px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 13pt;
+}
+.blog_post_button:hover{
+   background-color: var(--nav_accent_darker);
+}
+
+.sideBar {
+  background-color: var(--sideBar_background);
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  margin:15px;
+  margin-bottom: 55px; 
+}
+/*post color definitions*/
+.dark {
+  background-color: #01363b;
+}
+.middle {
+  background-color: #055f68;
+}
+.light {
+  background-color: #1ea5b2;
+}
+.purple {
+  background-color: var(--sideBar_background);
+}
+
+.separator {
+  width: 100%;
+  height: 5px;
+  max-width: 960px;
+  margin: auto;
+}
+.blog_footer {
+  margin: 25px;
+  margin-bottom: 65px;
+  background-color: var(--bcg_main);
+}
+.loadMore_button {
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 13pt;
+}
+.siteFooter {
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  padding: 30px;
+  padding-top: 50px;
+  color: white;
+}
+.footer_text {
+  font-size: 12pt;
+  padding: 5px;
+}
+.footer_navItems{
+  cursor: pointer;
+  padding: 12px;
+  padding-top: 3px;
+  font-size: 10pt;
+}
+.footer_navItems:hover{
+  color: var(--nav_accent_darker);
+}
+.bold{
+  font-weight: bold;
+}
+.dot{
+  background-color: white;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin-bottom: 0px;
+}
+.footer_contacts{
+  padding: 15px;
+}
+.separator_white {
+  background-color: white;
+  width: 30%;
+  height: 1px;
+  max-width: 360px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+.footer_input {
+  padding: 10px;
+  margin-top: 15px;
+  margin:5px;
+  border-radius: 3px;
+  border: 1px solid white;
+  color: var(--sideBar_background);
+}
+.wButton {
+  margin-right: 0px;
+  /*width: 250px;*/ 
+}
+.footer_buttonWrap{
+  width: 15px;
+ 
+}
+.footer_Button {
+  position: absolute;
+  cursor: pointer;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background-color: var(--sideBar_background);
+  color: white;
+  font-weight: bold;
+}
+.footer_subscribe {
+  padding: 25px;
+}
+.footer_pp{
+  text-transform: uppercase; 
+  padding: 15px;
+  font-size: 10pt;
+  text-align: center;
+  font-weight: bold;
+  color: var(--sideBar_background);
+}
+.sideNavHeader {
+  padding: 10px;
+  font-size: 15pt;
+}
+.sideNavLink {
+  font-size: 10.5pt;
+  padding: 8px;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+}
+.sideNavLink:hover{
+  color: var(--nav_accent_darker);
+}
+.sideNavImg{
+  padding-top: 35px; 
+}
+.qoute {
+  font-size: 55pt;
+  color: #1ea5b2;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
+
+}
+.sideNav_quote {
+  font-size: 15pt;
+  line-height: 1.2em;
+  padding: 15px;
+}
+.top{
+  line-height: 15px;
+  margin-top: 70px; 
 }
